@@ -1,4 +1,20 @@
+div {
+    border: 2px solid blue;
+    width: 60vw;
+    height: 100vh;
+    background-color: aqua;
+    margin-left: 5vw;
+}
+
+#tit-super {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+}
+
 fieldset {
+    flex: 1 1 auto;
+    font-family: Arial, sans-serif;
     margin-top: 10px;
     margin-left: 5vw;
     width: 45vw; 
@@ -26,6 +42,6 @@ button {
 
 option {
     color: black;
-    background-color:rgb(194, 238, 236);
+    background-color:rgb(175, 247, 255);
 }
 

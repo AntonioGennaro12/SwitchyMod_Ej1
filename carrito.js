@@ -8,6 +8,7 @@ Producto 2: 3 unid. 15% de desc. 7 unid  30%
 const pagina        = document.querySelector ("body");
 const selectCant    = document.querySelector ("select");
 const miImg         = document.querySelector ("#mi-img");
+const miCompra      = document.querySelector ("#mi-compra")
 const miParrafo0    = document.querySelector ("#mi-parr0");
 const miParrafo1    = document.querySelector ("#mi-parr1");
 const miParrafo2    = document.querySelector ("#mi-parr2");
@@ -40,13 +41,14 @@ const NUM_7         = 7 ;
 
 // Variables 
 let productoTipo    = PROD_1;
+let descProducto    = DESC_PROD_1;
 var precioCorr      = PR_PROD_1;
 var precioCompra    = 0; 
 var totalCompra     = 0;
 let cantProd        = 0;
 
 // Inicializaciones Varias
-miCantidad.textContent  = "Cantidad: Hoy descuento por 3 y 7 unidades"
+miCantidad.textContent  = "Cantidad?  Hoy descuento por 3 y 7 unidades"
 miImg.src               = IMAGEN_1;
 miParrafo0.textContent  = DESC_PROD_1;
 miParrafo1.textContent  = "Precio = $" + PR_PROD_1 + ".-";
@@ -87,6 +89,18 @@ function calculaDesc (tipo, cant, compra) {
 }
 
 /**
+ * Anticipa el precio de la compra con el descuento
+ */
+function muestraCompra() {
+    let compra  = 0;
+    compra = (cantProd * precioCorr);
+    compra = calculaDesc (productoTipo, cantProd, compra);
+    compra = ((Math.round(compra*100))/100);
+    miCompra.textContent = "Precio de la compra con descuento $" +compra+".- Agrega?";                           
+}
+
+
+/**
  * Boton "AGREGAR"
  */
 function agregaCompra() {
@@ -110,6 +124,7 @@ function prodSiguiente() {
     else {
         cambProducto (DESC_PROD_1, PROD_1, PR_PROD_1);
     }
+    muestraCompra ();
 }
 
 /**
@@ -119,14 +134,18 @@ function selccionaCantidad() {
     switch (selectCant.value) {
         case UNO:
             cantProd = NUM_1;
+            muestraCompra ();
             break;
         case TRES:
             cantProd = NUM_3;
+            muestraCompra ();
             break;
         case SIETE:
             cantProd = NUM_7;
+            muestraCompra ();
             break;
         default:
             cantProd = CERO;
+            miCompra.textContent = "Elija una cantidad y le anticipamos el precio con descuento";
     }
-}
+ }
