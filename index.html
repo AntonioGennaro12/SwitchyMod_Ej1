@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="disenio.css">
+<body>
+    <fieldset>
+        <img id="mi-img" src="" alt="">
+        <p id="mi-parr0"></p></p>
+        <p id="mi-parr1">Precio...</p>
+       <fieldset id="field-cant">
+            <legend>Cantidad</legend>
+            <select onchange="selccionaCantidad()" name="Producto Genérico" id="">
+            <option value="cero" >-</option>
+            <option value="uno"  >1</option>
+            <option value="tres" >3</option>
+            <option value="siete">7</option>
+            </select>
+            <br><br>
+            <button onclick="agregaCompra()">Agregar</button>
+        </fieldset>
+    </fieldset>
+    
+    <fieldset>
+        <button id="mi-bot2" onclick="prodSiguiente()">Producto Siguiente</button>
+    </fieldset>
+    
+    <fieldset>
+        <p id="mi-parr2">Total...</p>
+    </fieldset>
+       
+    <fieldset>
+        <legend>Carrito</legend>
+        <ol id="mi-ol1"></ol>
+    </fieldset>
+    
+<script src="carrito.js"></script>
+</body>
+
+</html>

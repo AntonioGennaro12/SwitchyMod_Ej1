@@ -1,0 +1,31 @@
+fieldset {
+    margin-top: 10px;
+    margin-left: 5vw;
+    width: 45vw; 
+}
+
+#field-cant {
+    width: 40vw;
+    margin-left: 0vw;
+}
+
+button {
+    width: 35vw;
+    align-content: center;
+    margin-left: 3vw;
+}
+
+#mi-bot2 {
+    margin-left: 5vw;
+}
+
+#mi-img {
+    height:25vh;
+    width: 280px;
+}
+
+option {
+    color: black;
+    background-color:rgb(194, 238, 236);
+}
+
